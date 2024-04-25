@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.2.0 (2024-04-25)
+
 Features:
 
 - Support the optional `custom_request_headers` field for `google.cloudRun` services.
