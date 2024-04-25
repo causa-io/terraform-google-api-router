@@ -37,6 +37,8 @@ resource "google_compute_backend_service" "cloud_run_service" {
   name                  = "run-${each.key}"
   load_balancing_scheme = "EXTERNAL_MANAGED"
 
+  custom_request_headers = try(local.cloud_run_services[each.key].custom_request_headers, [])
+
   backend {
     group = each.value.id
   }
