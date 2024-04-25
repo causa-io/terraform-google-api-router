@@ -28,6 +28,9 @@ variable "services" {
     region = optional(string)
     # The name of the Cloud Run service to expose.
     service = optional(string)
+    # Custom request headers set by the Google Front End.
+    # See https://cloud.google.com/load-balancing/docs/https/custom-headers.
+    custom_request_headers = optional(set(string))
   }))
   description = "A map where values define the services exposed by the router."
 }
