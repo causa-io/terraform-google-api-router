@@ -49,6 +49,12 @@ module "my_api_router" {
 
       # The name of the Cloud Run service.
       service = "my-cloud-run-service"
+
+      # A list of custom headers added by the Google Front End to all incoming requests.
+      # See https://cloud.google.com/load-balancing/docs/https/custom-headers.
+      custom_request_headers = [
+        "X-My-Header:{client_protocol}",
+      ]
     }
   }
 }
