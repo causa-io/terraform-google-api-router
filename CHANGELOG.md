@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.3.0 (2024-08-30)
+
 Breaking changes:
 
 - Drop support for Google provider `< 6.0.0` and support `6.*.*`.
