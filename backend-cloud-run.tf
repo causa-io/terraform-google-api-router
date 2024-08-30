@@ -37,6 +37,12 @@ resource "google_compute_backend_service" "cloud_run_service" {
   name                  = "run-${each.key}"
   load_balancing_scheme = "EXTERNAL_MANAGED"
 
+  # Although optional, not explicitly disabling the Identity-Aware Proxy can cause unnecessary diffs in Terraform plans.
+  # https://github.com/hashicorp/terraform-provider-google/issues/19273
+  iap {
+    enabled = false
+  }
+
   custom_request_headers = try(local.cloud_run_services[each.key].custom_request_headers, [])
 
   backend {
