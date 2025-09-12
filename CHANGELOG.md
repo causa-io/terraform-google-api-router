@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.3.1 (2025-09-12)
+
 Chores:
 
 - Bump google provider supported versions.
