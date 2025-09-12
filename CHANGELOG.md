@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+Chores:
+
+- Bump google provider supported versions.
+
 ## v0.3.0 (2024-08-30)
 
 Breaking changes:
