@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.3.2 (2025-10-08)
+
 Fixes:
 
 - Filter out Cloud Run services with no path to prevent errors when creating URL maps.
