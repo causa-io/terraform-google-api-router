@@ -2,7 +2,7 @@ locals {
   cloud_run_services = {
     for name, definition in var.services :
     name => definition
-    if definition.type == "google.cloudRun"
+    if definition.type == "google.cloudRun" && length(definition.paths) > 0
   }
 
   cloud_run_path_rules = {
