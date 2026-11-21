@@ -55,6 +55,9 @@ module "my_api_router" {
       custom_request_headers = [
         "X-My-Header:{client_protocol}",
       ]
+
+      # The ID of a Cloud Armor security policy applied to the service's backend.
+      security_policy = google_compute_security_policy.my_policy.id
     }
   }
 }
