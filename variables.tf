@@ -31,6 +31,9 @@ variable "services" {
     # Custom request headers set by the Google Front End.
     # See https://cloud.google.com/load-balancing/docs/https/custom-headers.
     custom_request_headers = optional(set(string))
+    # The ID of a Cloud Armor security policy (`google_compute_security_policy`) applied to the
+    # backend service, e.g. to rate limit some routes. No policy is applied when it is not set.
+    security_policy = optional(string)
   }))
   description = "A map where values define the services exposed by the router."
 }
