@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.4.0 (2026-11-21)
+
 Features:
 
 - Support setting a Cloud Armor security policy on the backend service of each Cloud Run service.
